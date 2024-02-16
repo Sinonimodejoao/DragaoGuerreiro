@@ -1,0 +1,90 @@
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		dragaoguerreiro
+	</title>
+
+	<style>
+
+    body {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+   .box{
+    background-color: rgb(26, 23, 23);
+    height: 50%;
+    width: 120%;
+    border-radius: 20px;
+    color: rgb(215, 206, 17);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    
+    
+   }
+
+   audio{
+    display: none;
+   }
+
+	</style>
+</head>
+<body>
+
+
+
+<audio id="player" preload="auto" controls>
+        <source src="audio/luan.mp3" type="audio/mpeg">
+      
+</audio>
+<div class="container">
+<div class="box">
+    <label for="tigresa">Qual é o nome do protagonista de kung-fu panda?</label>
+    <input type="text" id="tigresa">
+    <button onclick="veracidadeounao()">Verificar?</button>
+</div>
+</div>
+
+
+<script>
+
+function veracidadeounao() {
+    var resposta = document.getElementById("tigresa").value;
+    if (resposta ==="po") {
+        alert ("TIGRESAAAAA");
+	alert ("FIQUE PELADA TIGRESA");
+	alert ("🎵🎵🎵🎵🎵EVERBODY IS KUNG-FU FIGHTING🎵🎵🎵🎵🎵🎵🎵");
+	alert ("EU SOU O DRAGÃO GUERREIRO TIGRESA");
+    }else if (resposta ==="tigresa") { 
+	alert ("FIQUE PELADA TIGRESA");
+        
+    } else if (resposta ==="macaco"){ 
+	alert ("🎵🎵🎵🎵🎵EVERBODY IS KUNG-FU FIGHTING🎵🎵🎵🎵🎵🎵🎵");
+        
+    } else  {
+	alert ("EU SOU O DRAGÃO GUERREIRO TIGRESA");
+        
+    } 
+    
+}
+
+// Reproduzir áudio automaticamente quando a página é carregada
+document.addEventListener('DOMContentLoaded', function() {
+    var player = document.getElementById('player');
+    player.oncanplaythrough = function() {
+        player.play();
+    };
+});
+
+</script>
+
+
+</body>
+
+</html>
