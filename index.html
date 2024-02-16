@@ -30,7 +30,9 @@
     font-size: 20px;
    }
 
-   
+   audio{
+    display: none;
+   }
 
 	</style>
 </head>
@@ -76,18 +78,6 @@ function veracidadeounao() {
     
 }
 
-// Reproduzir áudio automaticamente quando a página é carregada
-document.addEventListener('DOMContentLoaded', function() {
-    var player = document.getElementById('player');
-    player.addEventListener('canplaythrough', function() {
-        player.play();
-    });
-
-    // Se o evento canplaythrough não for disparado, tentar reproduzir o áudio diretamente
-    if (player.readyState >= 2) {
-        player.play();
-    }
-});
 
 </script>
 
