@@ -9,6 +9,9 @@
 	<style>
 
     body {
+        background-image: url('https://w.forfun.com/fetch/af/af6ae3ca0584b6a7454d1c335b3edc08.jpeg'); /* Substitua pelo caminho da sua imagem */
+        background-size: cover; /* Faz com que a imagem cubra todo o background */
+        background-repeat: no-repeat; /* Evita a repetição da imagem */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -35,15 +38,18 @@
 
 
 
-<audio id="player" controls autoplay>
-        <source src="audio/luan.mp3" type="audio/mpeg">
-      
-</audio>
+
 <div class="container">
+  
 <div class="box">
     <label for="tigresa">Qual é o nome do protagonista de kung-fu panda?</label>
     <input type="text" id="tigresa">
     <button onclick="veracidadeounao()">Verificar?</button>
+
+    <audio id="player" controls autoplay>
+        <source src="audio/luan.mp3" type="audio/mpeg">
+      
+</audio>
 </div>
 </div>
 
