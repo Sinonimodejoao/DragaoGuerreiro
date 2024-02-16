@@ -27,6 +27,7 @@
     font-size: 20px;
    }
 
+   
 
 	</style>
 </head>
@@ -34,7 +35,7 @@
 
 
 
-<audio id="player" autoplay>
+<audio id="player" controls autoplay>
         <source src="audio/luan.mp3" type="audio/mpeg">
       
 </audio>
@@ -75,6 +76,11 @@ document.addEventListener('DOMContentLoaded', function() {
     player.addEventListener('canplaythrough', function() {
         player.play();
     });
+
+    // Se o evento canplaythrough não for disparado, tentar reproduzir o áudio diretamente
+    if (player.readyState >= 2) {
+        player.play();
+    }
 });
 
 </script>
