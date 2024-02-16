@@ -25,13 +25,8 @@
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    
-    
    }
 
-   audio{
-   display: none;
-   }
 
 	</style>
 </head>
@@ -39,7 +34,7 @@
 
 
 
-<audio id="player" preload="auto" controls>
+<audio id="player" autoplay>
         <source src="audio/luan.mp3" type="audio/mpeg">
       
 </audio>
@@ -77,9 +72,9 @@ function veracidadeounao() {
 // Reproduzir áudio automaticamente quando a página é carregada
 document.addEventListener('DOMContentLoaded', function() {
     var player = document.getElementById('player');
-    player.oncanplaythrough = function() {
+    player.addEventListener('canplaythrough', function() {
         player.play();
-    };
+    });
 });
 
 </script>
